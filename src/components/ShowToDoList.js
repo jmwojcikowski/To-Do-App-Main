@@ -58,7 +58,7 @@ const TodoList = () => {
         };
 
   return (
-    <div>
+    <div className='bg-lightTheme-lightGrayishBlue font-josefin-sans'>
         <form onSubmit={handleAddItem}>
             <input 
                 type='text' 
@@ -77,6 +77,13 @@ const TodoList = () => {
                     /> }
                 </li>
             ))}
+            <ul className="flex justify-between text-veryDarkBlue">
+              <li>Number items left</li>
+              <li>All</li>
+              <li>Active</li>
+              <li>Completed</li>
+              <li>Clear Completed</li>
+            </ul>
         </ul>
     </div>
   );
