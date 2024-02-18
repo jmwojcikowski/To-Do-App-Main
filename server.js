@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const ToDoItem = require('./src/models/toDoList.model')
 
+const mongoURI = process.env.MONGODB_URI;
 const app = express();
 const PORT = process.env.PORT || 5000;
 
@@ -10,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 // Połączenie z bazą danych MongoDB Atlas
-mongoose.connect('mongodb+srv://jakubwojcikowski:ofw8Crs6cR0VUD1B@cluster0.w6kqbyi.mongodb.net/ToDoList', {
+mongoose.connect(`mongodb://${mongoURI}`, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
