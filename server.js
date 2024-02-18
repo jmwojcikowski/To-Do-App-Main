@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-// Połączenie z bazą danych MongoDB Atlas
+// Połączenie z bazą danych MongoDB Atlas test funkcjonalności
 mongoose.connect(`mongodb://${mongoURI}`, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
